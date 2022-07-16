@@ -1,0 +1,237 @@
+.conteiner{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+
+/* INICIO */
+.inicio{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 400px;
+     background-image: url("../../../assets/img/home/opaco.gif");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     
+}
+
+
+.fondo{
+     background-image: url("../../../assets/img/home/fondo.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     position: absolute;
+     width: 550px;
+     height: 400px;
+     opacity: 0.4;
+}
+
+.inicio img {
+     width: 25%;
+}
+
+.inicio p {
+     font-size: 0.9rem;
+}
+
+.btn-iniciar{
+     background-color: #8254b5;
+     border-radius: 50px;
+     width: 110px;
+     height: 30px;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+     font-size: 1rem;
+     border: none;
+}
+
+
+
+/* PUBLICIDAD */
+.publicidad {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     
+}
+
+.texto{
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     Width: 550px;
+     font-family: 'Titillium Web', sans-serif;
+     color: #8254b5;
+}
+
+.p-galery{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.p-galery img {
+     margin-left: 10px;
+     margin-right: 10px;
+}
+
+.p-galery #a, #c{
+     width: 10%;
+}
+.p-galery #b{
+     width: 15%;
+}
+
+.grid{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     width: 500px;
+     grid-gap: 10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+.caracteristicas{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     padding: 15px;
+}
+
+.caracteristicas img{
+     width: 50%;
+     margin-bottom: 10px;
+     
+}
+
+.caracteristicas p{
+     width: 100%;
+     font-weight: bold;
+     margin-bottom: 2px !important;
+     
+}
+
+.caracteristicas div{
+     font-size: 0.8rem;
+     width: 100%;
+     text-align: justify !important; 
+     font-family: 'Titillium Web', sans-serif;
+     
+}
+
+
+.empresas{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     padding: 15px;
+}
+
+.empresas i{
+     font-size: 25px;
+}
+
+.empresas p{
+     margin: 0 0 0 10px!important;
+}
+
+/* PIE DE PAGINA */
+
+.pie-pagina{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #8254b5;
+     width: 100%;
+     height: max-content;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+     padding: 5px;
+}
+
+.pie-pagina img{
+     width: 10%;
+}
+
+
+.pie-pagina div i{
+     font-size: 1rem;
+     margin-right: 10px;
+}
+
+.pie-logo{
+     display: flex;
+     align-items: flex-end;
+}
+
+.pie-logo div
+{
+     padding-left: 10px;
+}
+
+.social-media{
+     display: flex;
+     justify-content: flex-end;
+     width: 100%;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+     .inicio{
+          width: 100%;
+          height: 300px;
+          /* background-color: red; */
+     }
+
+     .inicio img {
+          width: 50%;
+     }
+
+     .texto{
+          Width: 100%;
+     }
+
+     .p-galery #a, #c{
+          width: 20%;
+     }
+     .p-galery #b{
+          width: 30%;
+     }
+
+     .grid{
+          width: 400px;
+     }
+
+     .caracteristicas div{
+          font-size: 0.75rem;
+     }
+
+     .empresas{
+          padding: 0!important;
+          margin: 5px 0 5px 0!important;
+     }
+
+     #lista-empresas{
+          display: grid;
+          grid-template-columns: 1fr 1fr !important;
+     }
+}
