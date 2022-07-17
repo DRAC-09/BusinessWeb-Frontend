@@ -1,3 +1,11 @@
+.flex{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+
 .conteiner{
      display: flex;
      flex-direction: column;
@@ -7,10 +15,6 @@
 
 /* INICIO */
 .inicio{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
      width: 100%;
      height: 400px;
      background-image: url("../../../assets/img/home/opaco.gif");
@@ -19,7 +23,6 @@
      background-repeat: no-repeat;
      
 }
-
 
 .fondo{
      background-image: url("../../../assets/img/home/fondo.jpg");
@@ -52,16 +55,7 @@
 }
 
 
-
 /* PUBLICIDAD */
-.publicidad {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     
-}
-
 .texto{
      display: flex;
      justify-content: center;
@@ -99,9 +93,6 @@
 }
 
 .caracteristicas{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
      text-align: center;
      padding: 15px;
 }
@@ -129,10 +120,7 @@
 
 
 .empresas{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
+     flex-direction: row;
      padding: 15px;
 }
 
@@ -143,6 +131,7 @@
 .empresas p{
      margin: 0 0 0 10px!important;
 }
+
 
 /* PIE DE PAGINA */
 
@@ -162,7 +151,6 @@
      width: 10%;
 }
 
-
 .pie-pagina div i{
      font-size: 1rem;
      margin-right: 10px;
@@ -173,8 +161,7 @@
      align-items: flex-end;
 }
 
-.pie-logo div
-{
+.pie-logo div{
      padding-left: 10px;
 }
 
@@ -187,9 +174,160 @@
 }
 
 
+/* MODAL REGISTRO */
+.modal-body{
+     font-family: 'Titillium Web', sans-serif;
+}
+
+.modalRegistroContainer{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+
+.modalRegistroBotones{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+} 
+
+.form-cerrar{
+     font-size: 1.5rem !important;
+     color: rgba(0, 0, 0, 0.464);
+     width: 100%;
+     display: flex !important;; 
+     justify-content: flex-end !important; 
+}
+
+.btn-cerrar{
+     border: none !important;
+     background-color: rgba(255, 255, 255, 0);
+}
+
+.modalRegistroBotones button{
+     width: 110px;
+     height: 30px;
+     color: #0E80E3;
+     background-color: rgba(255, 255, 255, 0);
+     font-size: 1.2rem;
+}
 
 
+.mr-info{
+     width: 100%;
+     padding: 0px 30px 0px 30px;
+}
 
+.mr-info p{
+     margin: 0 !important;
+}
+
+.mr-info input{
+     width: 100%;
+     height: 20px;
+     border-top: 0 !important;
+     border-left: 0 !important;
+     border-right: 0 !important;
+     border-bottom: 1px solid #00000032;
+     font-size: 1rem;
+     color: #8254b5;
+     margin-bottom: 30px;
+}
+
+.div-comenzar {
+     width: 100%;
+     display: flex !important;; 
+     justify-content: center !important; 
+}
+
+.btn-comenzar{
+     background-color: #0E80E3;
+     width: 110px;
+     height: 30px;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+     font-size: 1rem;
+     border: none;
+}
+
+.btn-underline{
+     border-bottom: 1.5px solid #0E80E3;
+     border-top: 0 !important;
+     border-left: 0 !important;
+     border-right: 0 !important;
+}
+
+.btn-borderNone{
+     border: none;
+}
+
+.planes-container h2{
+     margin-bottom: 15px;
+}
+
+#plan-disp{
+     margin-bottom: 20px !important;
+}
+
+.planes{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr !important;
+     grid-gap: 10px;
+}
+
+.plan{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 5px;
+     border: 1px solid;
+     border-radius: 10px;
+}
+
+.plan-info{
+     text-align: left !important;
+}
+
+.plan-info p{
+     font-size: 0.8rem;
+     margin: 0 !important;
+}
+
+.plan h3{
+     font-size: 1.2rem;
+     /* color: #00AB11; */
+     font-weight: bold;
+}
+
+.plan button{
+     color: white;
+     /* background-color: #00AB11; */
+     border: none;
+     border-radius: 50px;
+     font-size: 0.8rem;
+}
+
+.title-gratis{color: #00AB11;}
+.back-gratis{background-color: #00AB11;}
+.border-gratis{border-color: #00AB11;}
+
+.title-basico{color: #8155B6;}
+.back-basico{background-color: #8155B6;}
+.border-basico{border-color: #8155B6;}
+
+.title-profesional{color: #0E80E3;}
+.back-profesional{background-color: #0E80E3;}
+.border-profesional{border-color: #0E80E3;}
+
+
+.pass{
+     font-size: 0.8rem;
+     text-align: right;
+     padding: 30px !important;
+     color: blue;
+}
 
 
 
@@ -233,5 +371,14 @@
      #lista-empresas{
           display: grid;
           grid-template-columns: 1fr 1fr !important;
+     }
+
+     .plan-info p{
+          font-size: 0.6rem;
+          margin: 0 !important;
+     }
+
+     .plan button{
+          font-size: 0.6rem;
      }
 }
