@@ -21,6 +21,7 @@
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
+     margin-bottom: 30px;
      
 }
 
@@ -88,8 +89,9 @@
      grid-template-columns: 1fr 1fr 1fr;
      width: 500px;
      grid-gap: 10px;
-     margin-top: 10px;
      margin-bottom: 10px;
+     align-items: flex-start;
+
 }
 
 .caracteristicas{
@@ -174,163 +176,6 @@
 }
 
 
-/* MODAL REGISTRO */
-.modal-body{
-     font-family: 'Titillium Web', sans-serif;
-}
-
-.modalRegistroContainer{
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-}
-
-.modalRegistroBotones{
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     width: 100%;
-} 
-
-.form-cerrar{
-     font-size: 1.5rem !important;
-     color: rgba(0, 0, 0, 0.464);
-     width: 100%;
-     display: flex !important;; 
-     justify-content: flex-end !important; 
-}
-
-.btn-cerrar{
-     border: none !important;
-     background-color: rgba(255, 255, 255, 0);
-}
-
-.modalRegistroBotones button{
-     width: 110px;
-     height: 30px;
-     color: #0E80E3;
-     background-color: rgba(255, 255, 255, 0);
-     font-size: 1.2rem;
-}
-
-
-.mr-info{
-     width: 100%;
-     padding: 0px 30px 0px 30px;
-}
-
-.mr-info p{
-     margin: 0 !important;
-}
-
-.mr-info input{
-     width: 100%;
-     height: 20px;
-     border-top: 0 !important;
-     border-left: 0 !important;
-     border-right: 0 !important;
-     border-bottom: 1px solid #00000032;
-     font-size: 1rem;
-     color: #8254b5;
-     margin-bottom: 30px;
-}
-
-.div-comenzar {
-     width: 100%;
-     display: flex !important;; 
-     justify-content: center !important; 
-}
-
-.btn-comenzar{
-     background-color: #0E80E3;
-     width: 110px;
-     height: 30px;
-     color: white;
-     font-family: 'Titillium Web', sans-serif;
-     font-size: 1rem;
-     border: none;
-}
-
-.btn-underline{
-     border-bottom: 1.5px solid #0E80E3;
-     border-top: 0 !important;
-     border-left: 0 !important;
-     border-right: 0 !important;
-}
-
-.btn-borderNone{
-     border: none;
-}
-
-.planes-container h2{
-     margin-bottom: 15px;
-}
-
-#plan-disp{
-     margin-bottom: 20px !important;
-}
-
-.planes{
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr !important;
-     grid-gap: 10px;
-}
-
-.plan{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     padding: 5px;
-     border: 1px solid;
-     border-radius: 10px;
-}
-
-.plan-info{
-     text-align: left !important;
-}
-
-.plan-info p{
-     font-size: 0.8rem;
-     margin: 0 !important;
-}
-
-.plan h3{
-     font-size: 1.2rem;
-     /* color: #00AB11; */
-     font-weight: bold;
-}
-
-.plan button{
-     color: white;
-     /* background-color: #00AB11; */
-     border: none;
-     border-radius: 50px;
-     font-size: 0.8rem;
-}
-
-.title-gratis{color: #00AB11;}
-.back-gratis{background-color: #00AB11;}
-.border-gratis{border-color: #00AB11;}
-
-.title-basico{color: #8155B6;}
-.back-basico{background-color: #8155B6;}
-.border-basico{border-color: #8155B6;}
-
-.title-profesional{color: #0E80E3;}
-.back-profesional{background-color: #0E80E3;}
-.border-profesional{border-color: #0E80E3;}
-
-
-.pass{
-     font-size: 0.8rem;
-     text-align: right;
-     padding: 30px !important;
-     color: blue;
-}
-
-
-
 
 
 @media screen and (max-width: 450px) {
@@ -346,6 +191,8 @@
 
      .texto{
           Width: 100%;
+          padding-left: 15px;
+          padding-right: 15px;
      }
 
      .p-galery #a, #c{
@@ -357,6 +204,8 @@
 
      .grid{
           width: 400px;
+          padding-left: 15px;
+          padding-right: 15px;
      }
 
      .caracteristicas div{
@@ -379,6 +228,10 @@
      }
 
      .plan button{
+          font-size: 0.6rem;
+     }
+
+     .caracteristicas div{
           font-size: 0.6rem;
      }
 }
