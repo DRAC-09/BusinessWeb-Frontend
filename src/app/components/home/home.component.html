@@ -1,15 +1,14 @@
 <div class="conteiner">
 
      <!-- INICIO -->
-     <section class="inicio">
+     <section class="flex inicio">
           <img src="../../../assets/img/home/BW.png" alt="">
           <p>Impulsando tu negocio, Facilitando tu desarrollo.</p>
-          <button class="btn-iniciar">INICIAR</button>
+          <button class="btn-iniciar" data-bs-toggle="modal" data-bs-target="#registroModal">INICIAR</button>
      </section>
 
-
      <!-- PUBLICIDAD -->
-     <section class="publicidad"><br><br>
+     <section class="flex"><br><br>
           <div class="texto">En business Web nuestra misión es satisfacer las necesidades técnicas de nuestros clientes y lograr el crecimiento de su negocio.</div>
           <br>
 
@@ -24,17 +23,17 @@
           <br>
 
           <div class="grid">
-               <div class="caracteristicas">
+               <div class="flex caracteristicas">
                     <img src="../../../assets/img/home/shopping-cart.png" alt="">
                     <p>Carrito</p>
                     <div>Cada sitio cuenta con un carrito de compra para que tus cliente puedan comprar desde la comodidad de su casa.</div>
                </div>
-               <div class="caracteristicas">
+               <div class="flex caracteristicas">
                     <img src="../../../assets/img/home/click.png" alt="">
                     <p>Facil</p>
                     <div>Agrega fotos, bloques y muchos mas con solo unos cuantos clics.</div>
                </div>
-               <div class="caracteristicas">
+               <div class="flex caracteristicas">
                     <img src="../../../assets/img/home/ssl.png" alt="">
                     <p>Seguridad</p>
                     <div>La seguridad a nivel de transporte se basa en la capa de sockets seguros (SSL).</div>
@@ -42,32 +41,31 @@
           </div>
      </section><br><br>
 
-
      <!-- EMPRESAS -->
      <section>
           <hr>
           <div id="lista-empresas" class="grid">
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-brands fa-adversal" style="color: green;"></i>
                     <p>Empresa1</p>
                </div>
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-brands fa-app-store-ios" style="color: red;"></i>
                     <p>Empresa2</p>
                </div>
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-brands fa-accusoft" style="color: blue;"></i>
                     <p>Empresa3</p>
                </div>
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-solid fa-apple-whole"></i>
                     <p>Empresa4</p>
                </div>
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-brands fa-angrycreative" style="color: violet;"></i>
                     <p>Empresa5</p>
                </div>
-               <div class="empresas">
+               <div class="flex empresas">
                     <i class="fa-brands fa-amazon"></i>
                     <p>Empresa6</p>
                </div>
@@ -75,6 +73,7 @@
           <hr>
      </section>
 
+     <!-- PIE DE PAGINA -->
      <section class="pie-pagina">
           <div class="pie-logo">
                <img src="../../../assets/img/home/BW_white_solido_256.ico" alt="">
@@ -87,4 +86,113 @@
                <i class="fa-brands fa-whatsapp"></i>
           </div>
      </section>
+</div>
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+     Launch demo modal
+</button> -->
+
+
+<!-- MODAL REGISTRO -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true" data-bs-backdrop="static">
+     <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          <div class="modal-body">
+               <div class="modalRegistroContainer">
+                    <div class="form-cerrar">
+                         <button class="btn-cerrar">
+                              <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+                         </button>
+                    </div>
+                    <div class="modalRegistroBotones">
+                         <button class="btn-underline">Registro</button>
+                         <hr>
+                         <button class="btn-borderNone" data-bs-toggle="modal" data-bs-target="#loginModal">Ingresar</button>
+                    </div><br>
+                    <div class="mr-info">
+                         <p>Correo:</p>
+                         <input type="text" name="" id="">
+                         <p>Contraseña:</p>
+                         <input type="text" name="" id="">
+                         <p>Nombre de la Empresa:</p>
+                         <input type="text" name="" id="">
+                    </div>
+               </div>
+               <div class="flex">
+                    <h2 id="plan-disp">Planes Disponibles</h2>
+                    <div class="planes">
+                         <div class="plan border-gratis">
+                              <h3 class="title-gratis">GRATIS</h3>
+                              <div class="plan-info">
+                                   <p>3 Paginas</p>
+                                   <p>3 Categorias</p>
+                                   <p>3 Bloques</p>
+                                   <p>10 Productos</p><br>
+                              </div>
+                              <button class="back-gratis">Seleccionar</button>
+                         </div>
+                         <div class="plan border-basico">
+                              <h3 class="title-basico">BASICO</h3>
+                              <div class="plan-info">
+                                   <p>3 Paginas</p>
+                                   <p>6 Categorias</p>
+                                   <p>8 Bloques</p>
+                                   <p>60 Productos</p><br>
+                              </div>
+                              <button class="back-basico">Seleccionar</button>
+                         </div>
+                         <div class="plan border-profesional">
+                              <h3 class="title-profesional">PROFESIONAL</h3>
+                              <div class="plan-info">
+                                   <p>Paginas ilimitadas</p>
+                                   <p>Categorias ilimitadas</p>
+                                   <p>Bloques ilimitados</p>
+                                   <p>Productos ilimitados</p><br>
+                              </div>
+                              <button class="back-profesional">Seleccionar</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="div-comenzar">
+               <button type="button" class="btn-comenzar">Comenzar!</button>
+          </div><br>
+          </div>
+     </div>
+</div>
+
+<!-- MODAL INGRESAR -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true" data-bs-backdrop="static">
+     <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+          <div class="modal-body">
+               <div class="modalRegistroContainer">
+                    <div class="form-cerrar">
+                         <button class="btn-cerrar">
+                              <i class="fa-solid fa-xmark" data-bs-dismiss="modal"></i>
+                         </button>
+                    </div>
+                    <div class="modalRegistroBotones">
+                         <button class="btn-borderNone" data-bs-toggle="modal" data-bs-target="#registroModal">Registro</button>
+                         <hr>
+                         <button class="btn-underline">Ingresar</button>
+                    </div><br>
+                    <div class="mr-info">
+                         <p>Correo:</p>
+                         <input type="text" name="" id="">
+                         <p>Contraseña:</p>
+                         <input type="text" name="" id="">
+                    </div>
+               </div>
+               <div class="pass" onclick="alert('Solo decoracion XD')">
+                    <u>He olvidado mi contraseña</u>
+                    <i class="fa-solid fa-face-sad-sweat"></i>
+               </div><br><br>
+               <div class="div-comenzar">
+                    <button type="button" class="btn-comenzar">Comenzar!</button>
+               </div><br>
+          </div>
+     </div>
 </div>
