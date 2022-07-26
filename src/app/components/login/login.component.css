@@ -16,7 +16,8 @@
 }
 
 .form{
-     width: 40%;
+     width: 25%;
+     height: 65%;
      padding: 20px;
      box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
 }
@@ -70,6 +71,7 @@
 }
 
 .div-buttons-end{
+     margin-top: max-content;
      width: 100%;
      display: flex !important;; 
      justify-content: space-evenly !important; 
@@ -83,6 +85,7 @@
      font-family: 'Titillium Web', sans-serif;
      font-size: 1rem;
      border: none;
+     margin-top: 30%;
 }
 
 .pass{
@@ -112,5 +115,9 @@
 
      .pass{
           margin-bottom: 65%;
-     }     
+     }
+     
+     .div-buttons-end button{
+          margin-top: 5%;
+     }
 }

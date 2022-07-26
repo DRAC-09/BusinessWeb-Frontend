@@ -1,0 +1,10 @@
+.body{
+     width: 70%;
+     height: 100vh;
+     margin-left: 20%;
+     /* z-index: 0; */
+     position: relative;
+     /* top: 0; */
+     /* transition: all 0.5s ease; */
+     padding: 1rem;
+}
