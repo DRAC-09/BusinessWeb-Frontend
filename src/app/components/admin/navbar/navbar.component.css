@@ -1,0 +1,78 @@
+:root{
+     --morado: #8155B6
+}
+
+
+.conteiner{
+     background-color: #8155B6;
+     height: 100vh;
+     width: auto;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+     padding: 10px 10px 10px 10px;
+}
+
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     width: 20%;
+     background-color: #f1f1f1;
+     height: 100%; /* Full height */
+     position: fixed; /* Make it stick, even on scroll */
+     overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.logo{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.nav-item button{
+     display: flex;
+     flex-direction: row;
+     text-align: center;
+     justify-content: left;
+     align-items: center;
+     padding-left: 15px;
+     border: none;
+     border-radius: 5px;
+     width: 100%;
+     height: 30px;
+     background-color: #8155B6;
+     color: white;
+}
+
+.nav-item button:hover {
+     background-color: #1d3871;
+}
+
+.nav-item button:active {
+     background-color: #1d3871;
+}
+
+.nav-item button p{
+     margin: 0px 0px 0px 10px !important;
+     
+}
+
+.nav-item img{
+     width: 50%;
+     height: 50%;
+     margin: 0px 0px 0px 10px !important;
+}
+
+h1{
+     font-size: 1rem;
+     margin-bottom: 1px;
+}
+
+hr{
+     margin-top: 0 !important;
+     margin-bottom: 5px !important;
+}
+
+.div-button{
+     display: flex;
+}

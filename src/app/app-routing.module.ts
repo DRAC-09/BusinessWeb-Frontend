@@ -12,6 +12,9 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'admin-companies',loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)},
+  
+  {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
