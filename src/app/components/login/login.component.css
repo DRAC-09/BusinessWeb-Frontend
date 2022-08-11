@@ -12,12 +12,11 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     
 }
 
 .form{
-     width: 25%;
-     height: 65%;
+     width: 400px;
+     height: 620px;
      padding: 20px;
      box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
 }
@@ -74,7 +73,9 @@
      margin-top: max-content;
      width: 100%;
      display: flex !important;; 
-     justify-content: space-evenly !important; 
+     justify-content: space-evenly !important;
+     position: fixed;
+     left: 0; 
 }
 
 .div-buttons-end button{
@@ -85,7 +86,12 @@
      font-family: 'Titillium Web', sans-serif;
      font-size: 1rem;
      border: none;
-     margin-top: 30%;
+}
+
+.div-buttons-end div {
+     width: 250px;
+     display: flex;
+     justify-content: space-between !important;
 }
 
 .pass{

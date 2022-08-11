@@ -15,5 +15,4 @@ export class BodyComponent implements OnInit {
   getBodyClass(): string {
     return 'body';
   }
-
 }

@@ -8,56 +8,26 @@
                </div><br>
 
                <h1>CONFIGURACION</h1><hr>
-               <button routerLink="./info">
+               <button routerLinkActive="active-link" routerLink="./business">
                     <i class="fa-solid fa-circle-info"></i>
-                    <p>Informacion Empresa</p>
-               </button><br>
-
-               <h1>CONTENIDO</h1><hr>
-               <button routerLink="./pages">
-                    <i class="fa-regular fa-file"></i>
-                    <p>Paginas</p>
-               </button>
-               <button routerLink="./blocks">
-                    <i class="fa-solid fa-table-cells-large"></i>
-                    <p>Bloques</p>
-               </button>
-               <button routerLink="./products">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <p>Productos</p>
-               </button><br>
-
-               <h1>GALERIA</h1><hr>
-               <button routerLink="./images">
-                    <i class="fa-solid fa-image"></i>
-                    <p>Imagenes</p>
-               </button>
-               <button routerLink="./videos">
-                    <i class="fa-solid fa-film"></i>
-                    <p>Videos</p>
-               </button>
-               <button routerLink="./others">
-                    <i class="fa-solid fa-folder"></i>
-                    <p>Otros</p>
-               </button><br>
-
-               <h1>USUARIO</h1><hr>
-               <button routerLink="./home-admin">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Inicio</p>
-               </button>
-               <button routerLink="./home">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <p>Salir</p>
+                    <p>Empresas</p>
                </button>
 
-               <!-- Forma alternativa de hacer el menu: -->
-               <!-- <button *ngFor="let data of navData">
-                    <div class="div-button" [routerLink]="[data.routerLink]">
-                         <i [ngClass]="data.icon"></i>
-                         <p>{{data.label}}</p>
-                    </div>
-               </button> -->
+               <button routerLinkActive="active-link" routerLink="./plans">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Planes</p>
+               </button>
+
+               <button routerLinkActive="active-link" routerLink="./temes">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Temas</p>
+               </button>
+
+               <button routerLinkActive="active-link" routerLink="./users">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p>Usuarios</p>
+               </button>
+
           </div>
      </div>
 </ul>

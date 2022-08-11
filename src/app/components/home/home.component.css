@@ -10,7 +10,17 @@
      display: flex;
      flex-direction: column;
      align-items: center;
+     /* user-select: none !important; */
 }
+
+.disable-select {
+     -webkit-touch-callout: none !important; /* iOS Safari */
+     -webkit-user-select: none !important;   /* Chrome/Safari/Opera */
+     -khtml-user-select: none !important;    /* Konqueror */
+     -moz-user-select: none !important;      /* Firefox */
+     -ms-user-select: none !important;       /* Internet Explorer/Edge */
+     user-select: none !important;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+} 
 
 
 /* INICIO */
@@ -22,7 +32,7 @@
      background-position: center;
      background-repeat: no-repeat;
      margin-bottom: 30px;
-     
+     padding: 13rem;
 }
 
 .fondo{
@@ -47,11 +57,11 @@
 .btn-iniciar{
      background-color: #8254b5;
      border-radius: 50px;
-     width: 110px;
-     height: 30px;
+     width: 120px;
+     /* height: 50px; */
      color: white;
      font-family: 'Titillium Web', sans-serif;
-     font-size: 1rem;
+     font-size: 1.2rem;
      border: none;
 }
 
@@ -176,13 +186,24 @@
 }
 
 
-
+@media screen and (max-width: 1280px) {
+     .inicio{
+          width: 100%;
+          height: 300px;
+          padding: 9rem;
+     }
+}
 
 @media screen and (max-width: 450px) {
      .inicio{
           width: 100%;
           height: 300px;
-          /* background-color: red; */
+          padding: 0;
+     }
+
+     .btn-iniciar{
+          width: 100px;
+          font-size: 1rem;
      }
 
      .inicio img {
