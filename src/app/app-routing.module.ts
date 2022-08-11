@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'admin-companies',loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)},
+  {path: 'admin',loadChildren: () => import('./components/admin/admin.module').then(x => x.AdminModule)},
+  {path: 'admin-companies',loadChildren: () => import('./components/business/business.module').then(m => m.BusinessModule)},
   
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
