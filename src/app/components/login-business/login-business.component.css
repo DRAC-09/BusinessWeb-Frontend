@@ -108,6 +108,17 @@
      color: blue;
 }
 
+.btn-comenzar:hover{
+     background-color: #0E80E3 !important;
+     color: white !important;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 450px) {
      .form{
           width: 100%;

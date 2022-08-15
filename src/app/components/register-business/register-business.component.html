@@ -1,0 +1,72 @@
+<div [formGroup]="formularioRegister" class="conteiner" >
+     <div class="form">
+          <div class="div-buttons">
+               <button class="btn-underline">Registro</button>
+               <button class="btn-borderNone" routerLink="/login-business">Ingresar</button>
+          </div>
+          <div class="div-information">
+               <p>Correo:</p>
+               <input formControlName="email" type="text">
+               <p>Contraseña:</p>
+               <input formControlName="password" type="password">
+               <p>Nombre de la Empresa:</p>
+               <input formControlName="name" type="text">
+          </div>
+     
+          <h2 class="flex">Planes Disponibles</h2>
+          <div class="plans">
+
+               <div class="btn-group list-flex" role="group" aria-label="Basic radio toggle button group">
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                    <label class="btn btn-gratis" for="btnradio1" (click)="plans('Gratis')">
+                         <div class="plan-titulo">
+                              <h3>GRATIS</h3><hr>
+                         </div>
+                         <div class="plan-info">
+                              <p>3 Paginas</p>
+                              <p>3 Categorias</p>
+                              <p>3 Bloques</p>
+                              <p>10 Productos</p><br>
+                         </div>
+                    </label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-basico" for="btnradio2" (click)="plans('Basico')">
+                         <div class="plan-titulo">
+                              <h3>BASICO</h3><hr>
+                         </div>
+                         <div class="plan-info">
+                              <p>3 Paginas</p>
+                              <p>6 Categorias</p>
+                              <p>8 Bloques</p>
+                              <p>60 Productos</p><br>
+                         </div>
+                    </label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-profesional" for="btnradio3" (click)="plans('Profesional')">
+                         <div class="plan-titulo">
+                              <h3>Profesional</h3><hr>
+                         </div>
+                         <div class="plan-info">
+                              <p>20 Paginas</p>
+                              <p>30 Categorias</p>
+                              <p>50 Bloques</p>
+                              <p>99 Productos</p><br>
+                         </div>
+                    </label>
+               </div>
+          </div><br>
+
+          <div class="div-buttons-end">
+               <div>
+                    <button type="button" class="btn-comenzar" (click)="registrarEmpresa()">Registrarme!</button>
+                    <button type="button" class="btn-comenzar" routerLink="/home">Atras</button>
+               </div>
+          </div><br>
+     </div>
+</div>
+
+<!-- data-bs-dismiss="modal"  -->
+<!-- routerLink="/admin-companies"  -->

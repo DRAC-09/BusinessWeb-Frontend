@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';                // Formularios reactivos
+
 
 // importanto componentes
 import { BusinessRoutingModule } from './business-routing.module';
@@ -33,7 +35,9 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
   
   imports: [
     CommonModule,
-    BusinessRoutingModule
+    BusinessRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class BusinessModule { }
