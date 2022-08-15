@@ -1,0 +1,283 @@
+.flex{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.conteiner {
+     font-family: 'Titillium Web', sans-serif;
+     height: 100vh;      /* Centrar en la pantalla */
+     width: 100vw;       /* Centrar en la pantalla */
+     display: flex;
+     justify-content: center;
+     align-items: center;     
+}
+
+.form{
+     width: 400px;
+     height: 620px;
+     padding: 20px;
+     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.div-buttons{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     width: 100%;
+     margin-bottom: 50px;
+}
+
+.div-buttons button{
+     width: 110px;
+     height: 30px;
+     background-color: rgba(255, 255, 255, 0);
+     font-size: 1.2rem;
+     color: #0E80E3;
+}
+
+.btn-underline{
+     border-bottom: 1.5px solid #0E80E3;
+     border-top: 0 !important;
+     border-left: 0 !important;
+     border-right: 0 !important;
+}
+
+.btn-borderNone{
+     border: none;
+}
+
+.div-information{
+     width: 100%;
+     padding: 0px 30px 0px 30px;
+}
+
+.div-information p{
+     margin: 0 !important;
+}
+
+.div-information input{
+     width: 100%;
+     height: 30px;
+     border-top: 0 !important;
+     border-left: 0 !important;
+     border-right: 0 !important;
+     border-bottom: 1px solid #00000032;
+     font-size: 1rem;
+     color: #8254b5;
+     margin-bottom: 25px;
+}
+
+
+/* .plans-available{
+     font-size: 10px !important;
+     margin-bottom: 20px !important;
+} */
+
+/* .plans{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr !important;
+     grid-gap: 10px;
+     grid-row-gap: wrap;
+} */
+
+     
+
+
+/* BOTONES */
+
+.div-buttons-end{
+     width: 100%;
+     display: flex !important;; 
+     justify-content: center !important; 
+     position: fixed;
+     left: 0;
+}
+
+.div-buttons-end button{
+     background-color: #0E80E3;
+     width: 110px;
+     height: 30px;
+     color: white;
+     font-family: 'Titillium Web', sans-serif;
+     font-size: 1rem;
+     border: none;
+}
+
+.div-buttons-end div {
+     width: 250px;
+     display: flex;
+     justify-content: space-between !important;
+}
+
+.btn-comenzar{
+     background-color: white !important;
+     border: 1px solid #0E80E3 !important;
+     color: #0E80E3 !important;
+}
+
+.btn-comenzar:hover{
+     background-color: #0E80E3 !important;
+     color: white !important;
+}
+
+
+/* PLANES SELECCION */
+h2 {
+     font-size: 1.7rem;
+     color: #0E80E3;
+     margin-bottom: 15px;
+}
+
+.list-flex{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+}
+
+.btn-gratis{
+     --bs-btn-border-color: #00AB11;
+     --bs-btn-hover-color: #fff;
+     --bs-btn-hover-bg: #00AB11;
+     --bs-btn-focus-shadow-rgb: 13, 110, 253;
+     --bs-btn-active-color: #fff;
+     --bs-btn-active-bg: #00AB11;
+     --bs-btn-active-border-color: #00AB11;
+     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+     --bs-btn-disabled-bg: transparent;
+     --bs-gradient: none;
+}
+
+.btn-basico{
+     --bs-btn-border-color: #8254b5;
+     --bs-btn-hover-color: #fff;
+     --bs-btn-hover-bg: #8254b5;
+     --bs-btn-focus-shadow-rgb: 13, 110, 253;
+     --bs-btn-active-color: #fff;
+     --bs-btn-active-bg: #8254b5;
+     --bs-btn-active-border-color: #8254b5;
+     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+     --bs-btn-disabled-bg: transparent;
+     --bs-gradient: none;
+}
+
+.btn-profesional{
+     --bs-btn-border-color: #0E80E3;
+     --bs-btn-hover-color: #fff;
+     --bs-btn-hover-bg: #0E80E3;
+     --bs-btn-focus-shadow-rgb: 13, 110, 253;
+     --bs-btn-active-color: #fff;
+     --bs-btn-active-bg: #0E80E3;
+     --bs-btn-active-border-color: #0E80E3;
+     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+     --bs-btn-disabled-bg: transparent;
+     --bs-gradient: none;
+}
+
+/* .title-gratis{color: #00AB11;} */
+/* .back-gratis{background-color: #00AB11;}
+.border-gratis{border-color: #00AB11;}
+
+.title-basico{color: #8254b5;}
+.back-basico{background-color: #8254b5;}
+.border-basico{border-color: #8254b5;}
+
+.title-profesional{color: #0E80E3;}
+.back-profesional{background-color: #0E80E3;}
+.border-profesional{border-color: #0E80E3;} */
+
+/* .plan{
+     width: max-content;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+} */
+
+.plan-info{
+     text-align: left !important;
+}
+
+.plan-info p{
+     font-size: 0.8rem;
+     margin: 0 !important;
+}
+
+.plan-titulo h3{
+     font-size: 20px;
+}
+
+.plan-titulo hr{
+     margin: 0 0 10px 0 !important;
+
+}
+
+/* .plan h3{
+     font-size: 1.2rem;
+     font-weight: bold;
+}
+
+.plan button{
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 0.8rem;
+     width: 80px;
+} */
+
+
+
+
+
+/* VERSION MOBIL */
+@media screen and (max-width: 450px) {
+     .form{
+          width: 100%;
+          padding: 0px;
+          box-shadow: none;         
+     }
+
+     .div-buttons{
+          margin-bottom: 20px;
+     }
+
+     .plans{
+          display: flex;
+          justify-content: center;
+          /* background-color: #00AB11; */
+     }
+
+
+     .plans button{
+          font-size: 12px;
+     }
+
+     .plan{
+          padding: 5px 10px 5px 10px;
+     }
+
+     .plan-info p{
+          font-size: 0.7rem;
+     }
+}
+
+
+
+/* 
+@media screen and (max-width: 1280px) {
+     .form{
+          width: 30%;
+          height: 65%;
+          padding: 20px;
+          box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+     }
+     
+     .div-buttons{
+          margin-bottom: 20px;
+     }
+
+     .plan-info p{
+          font-size: 0.8rem;
+     }
+} */
