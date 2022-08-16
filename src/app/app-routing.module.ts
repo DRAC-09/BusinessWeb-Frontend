@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AutenticarGuard } from './autenticar.guard';
 
 // Importando Componentes
 import { HomeComponent } from './components/home/home.component';
 import { LoginBusinessComponent } from './components/login-business/login-business.component';
 import { RegisterBusinessComponent } from './components/register-business/register-business.component';
+
 
 // Rutas de Navegacion
 const routes: Routes = [
@@ -27,11 +29,13 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('./components/admin/admin.module').then(x => x.AdminModule)
+    loadChildren: () => import('./components/admin/admin.module').then(x => x.AdminModule),
+    canActivate: [AutenticarGuard]
   },
   {
     path: 'admin-companies',
-    loadChildren: () => import('./components/business/business.module').then(m => m.BusinessModule)
+    loadChildren: () => import('./components/business/business.module').then(m => m.BusinessModule),
+    canActivate: [AutenticarGuard]
   },
   
   {

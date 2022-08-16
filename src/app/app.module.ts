@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';                // Formularios reactivos
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';        //Hacer peticiones http
-// import { AutenticarGuard } from './autenticar.guard';                             // Guard para proteger rutas
-// import { TokenInterceptorService } from './services/token-interceptor-service';   // Interceptor para token
+import { TokenInterceptorService } from './services/token-interceptor.service';   // Interceptor para token
+import { AutenticarGuard } from './autenticar.guard';                                            // Guard para proteger rutas
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,14 @@ import { RegisterBusinessComponent } from './components/register-business/regist
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AutenticarGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

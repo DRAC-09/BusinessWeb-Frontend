@@ -1,4 +1,4 @@
-<div class="conteiner">
+<div [formGroup]="formularioLogin" class="conteiner">
      <div class="form">
           <div class="div-buttons">
                <button class="btn-borderNone" routerLink="/register-business">Registro</button>
@@ -6,9 +6,9 @@
           </div>
           <div class="div-information">
                <p>Correo:</p>
-               <input type="text" name="" id="">
+               <input formControlName="email" type="text" autocomplete=" ">
                <p>Contraseña:</p>
-               <input type="text" name="" id="">
+               <input formControlName="password" type="password" autocomplete=" ">
           </div>
           <div class="pass">
                <button onclick="alert('Solo decoracion XD')">
@@ -17,7 +17,7 @@
           </div><br><br><br>
           <div class="div-buttons-end">
                <div>
-                    <button type="button" class="btn-comenzar" data-bs-dismiss="modal" routerLink="/admin-companies">Comenzar!</button>
+                    <button type="button" class="btn-comenzar" data-bs-dismiss="modal" (click)="login()">Comenzar!</button>
                     <button type="button" class="btn-comenzar" data-bs-dismiss="modal" routerLink="/home">Atras</button>
                </div>
           </div><br>

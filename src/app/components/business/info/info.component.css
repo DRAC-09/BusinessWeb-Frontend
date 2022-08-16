@@ -1,8 +1,22 @@
 .conteiner{
-     width: 80%;
+     width: 900px;
      display: flex;
      flex-direction: column;
-     align-items: flex-end;
+     align-items: flex-start;
+     text-align: space-between;
+}
+
+table tbody tr td{
+     width: 330px;
+}
+
+.div-botones{
+     display: flex;
+     width: 73% !important;
+     justify-content: right;
+     align-items: center;
+     width: 100%;
+     padding-top: 20px;
 }
 
 i {font-size: 1.2rem; font-weight: bold; color: blueviolet;}

@@ -1,56 +1,64 @@
-<form [formGroup]="formularioEmpresa">
-     <div class="conteiner">
-          <table class="table">
-               <tbody>
-                    <tr>
-                         <i>Informacion del Usuario</i><br>
-                    </tr><br>
-                    <tr>
-                         <td scope="row">Email:</td>
-                         <td><input formControlName="correo" type="text" placeholder="correo@email.com"></td>
-                    </tr>
-                    <tr>
-                         <td scope="row">Tipo de Plan:</td>
-                         <td><label placeholder="Plan">Plan</label></td>
-                         <!-- <td><input formControlName="plan" type="text" name="" id="" placeholder="Plan"></td> -->
-                    </tr><br><br>
-          
-          
-                    <tr>
-                         <i>Informacion del Sitio</i>
-                    </tr><br>
-                    <tr>
-                         <td scope="row">Nombre de la Empresa:</td>
-                         <td><input formControlName="nombre" type="text" name="" id="" placeholder="Empresa"></td>
-                    </tr>
-                    <tr>
-                         <td scope="row">Titulo del Sitio:</td>
-                         <td><input formControlName="titulo" type="text" name="" id="" placeholder="Titulo"></td>
-                    </tr>
-                    <tr>
-                         <td scope="row">Descripcion:</td>
-                         <td><input formControlName="descripcion" type="text" name="" id="" placeholder="Descripcion"></td>
-                    </tr>
-                    <tr>
-                         <td scope="row">Logo (.png):</td>
-                         <td>
-                              <div><img width="100px" [src]="previsualizacionLogo || image" alt=""></div><br>
-                              <div><input class="hidden" (change)="capturarLogo($event)" formControlName="logo" accept=".png" type="file"></div>
-                              
-                         </td>
-                    </tr>
-                    <tr>
-                         <td scope="row">Favicon (.png):</td>
-                         <td>
-                              <div><img width="100px" [src]="previsualizacionFavicon || image" alt=""></div><br>
-                              <div><input class="hidden" (change)="capturarFavicon($event)" formControlName="favicon" accept=".png" type="file"></div>
-                         </td>
-                    </tr>
-               </tbody>
-          </table><br>
-          <button *ngIf="guardando" (click)="actualizar()"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
-          <button *ngIf="editando" (click)="editar()"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-     </div>
-</form>
+<div class="conteiner">
+     <form [formGroup]="formularioEmpresa">
+          <div>
+               <table class="table">
+                    <tbody>
+                         <tr>
+                              <i>Informacion del Usuario</i><br>
+                         </tr><br>
+                         <tr>
+                              <td class="columna" scope="row">Email:</td>
+                              <td class="columna"><input formControlName="email" type="text" id="correo"></td>
+                         </tr>
+                         <tr>
+                              <td scope="row">Tipo de Plan:</td>
+                              <td><label>{{plan}}</label></td>
+                              <!-- <td><input formControlName="plan" type="text" name="" id="" placeholder="Plan"></td> -->
+                         </tr><br><br>
+                    </tbody>
+               </table>
+          </div>
+          <div formGroupName="info">
+               <table class="table">
+                    <tbody>
+                         <tr>
+                              <i>Informacion del Sitio</i>
+                         </tr><br>
+                         <tr>
+                              <td class="columna" scope="row">Nombre de la Empresa:</td>
+                              <td ><input formControlName="name" type="text"></td>
+                         </tr>
+                         <tr>
+                              <td scope="row">Titulo del Sitio:</td>
+                              <td><input formControlName="tittle" type="text"></td>
+                         </tr>
+                         <tr>
+                              <td scope="row">Descripcion:</td>
+                              <td><input formControlName="description" type="text"></td>
+                         </tr>
+                         <tr style="height: 200px;">
+                              <td scope="row">Logo (.png):</td>
+                              <td>
+                                   <div><img width="100px" [src]="previsualizacionLogo || image" alt=""></div><br>
+                                   <div><input *ngIf="guardando" class="hidden" (change)="capturarLogo($event)" accept=".png" type="file" id="logo"></div>
+                                   
+                              </td>
+                         </tr>
+                         <tr style="height: 200px;">
+                              <td scope="row">Favicon (.png):</td>
+                              <td>
+                                   <div><img width="100px" [src]="previsualizacionFavicon || image" alt=""></div><br>
+                                   <div><input *ngIf="guardando" class="hidden" (change)="capturarFavicon($event)" accept=".png" type="file" id="favicon"></div>
+                              </td>
+                         </tr>
+                    </tbody>
+               </table>
+          </div>
+     </form>
+<div  class="div-botones">
+     <button *ngIf="guardando" (click)="actualizar()"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+     <button *ngIf="editando" (click)="editar()"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+</div>
 
 <!-- *ngIf="previsualizacion" -->
+</div>
