@@ -1,32 +1,50 @@
-<!-- <div>
-     <div><img width="100px" [src]="image" alt=""></div><br>
-     <div><input class="hidden" (change)="capturarLogo($event)" accept=".png" type="file" id="favicon" placeholder=""></div>
-     <button class="btn">Subir Archivo</button>
+<body>
+     <div>
+          <div class="container">
+          
+               <div style="width:40rem; margin: 0 0 0 20px;">
+                    <div class="upload-imagen">
+                         <img [src]="previsualizacionLogo || image" class="card-img-top" alt="...">
+                         <div class="flex-botones">
+                              <button type="button" class="btn btn-outline-primary btn-sm button"><input class="input-file" (change)="capturarLogo($event)" type="file"><i class="fa-solid fa-magnifying-glass"></i>Buscar</button>
+                              <button type="button" class="btn btn-outline-success btn-sm button" (click)="guardar ()"><i class="fa-solid fa-cloud-arrow-up"></i> Guardar</button>
+                         </div>
+                    </div>
+               </div>
+               <hr>       
+               
+               <div #asGallery class="row" *ngIf="gallery.length!=0">
+
+                    <div class="col-lg-4 col-sm-6" style="width: 12rem; margin: 20px;" *ngFor="let images of gallery[0];">
+                         <div class="thumbnail">
+                              <div class="img-container card">
+                                   <img [src]="images.img" alt= "" class="image">
+                                   <div class="overlay">
+                                        <div class="flex-botones caption">
+                                             <button type="button" class="btn btn-outline-primary btn-sm button"><input class="input-file" type="file"><i class="fa-solid fa-camera"></i>Sustituir</button>
+                                             <button type="button" class="btn btn-outline-danger btn-sm button"><i class="fa-solid fa-trash-can"></i> Borrar</button>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          
+               </div>
+          </div>
+     </div>
+</body>
+
+<!-- <tbody>
+     <tr *ngFor="let p of gallery;">
+          <td>{{p.gallery.img}}</td>
+     </tr>
+</tbody> -->
+
+
+<!-- <div *ngIf="gallery.length!=0">     
+          <div *ngFor="let images of gallery[0];">
+                    <img [src]="images.img" alt="">
+               
+          </div>
+     
 </div> -->
-
-<div class="grid">
-     <div><img width="100px" [src]="image" alt=""></div><br>
-     <div class="card" style="width: 12rem; display: flex; align-items: center;">
-          <img src="../../../../assets/img/home/online-shopping.png" class="card-img-top" alt="...">
-          <div class="flex-botones">
-               <button type="button" class="btn btn-outline-primary btn-sm"><input class="input-file" type="file"><i class="fa-solid fa-camera"></i>Sustituir</button>
-               <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can"></i> Borrar</button>
-          </div>
-     </div>
-</div>
-
-
-
-<hr>
-
-
-<div class="grid">
-     <i class="fa-solid fa-magnifying-glass"></i>
-     <div class="card" style="width: 12rem; display: flex; align-items: center;">
-          <img src="../../../../assets/img/home/online-shopping.png" class="card-img-top" alt="...">
-          <div class="flex-botones">
-               <button type="button" class="btn btn-outline-primary btn-sm"><input class="input-file" type="file"><i class="fa-solid fa-camera"></i>Sustituir</button>
-               <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can"></i> Borrar</button>
-          </div>
-     </div>
-</div>

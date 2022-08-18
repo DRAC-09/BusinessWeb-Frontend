@@ -5,6 +5,7 @@ import { AutenticarGuard } from './autenticar.guard';
 // Importando Componentes
 import { HomeComponent } from './components/home/home.component';
 import { LoginBusinessComponent } from './components/login-business/login-business.component';
+import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 import { RegisterBusinessComponent } from './components/register-business/register-business.component';
 
 
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login-business', 
     component: LoginBusinessComponent
+  },
+  {
+    path: 'login-admin', 
+    component: LoginAdminComponent
   },
   {
     path: 'register-business', 

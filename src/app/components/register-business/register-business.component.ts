@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgModel, Validators } from '@angular/forms';       // Importar FormControl, FormGroup, NgModel y Validators para usar en el formulario
 import { AuthService } from 'src/app/services/auth.service';                        // Importar servicio auth para acceder a (login, registro, etc)
-import { HttpClient, HttpHeaders} from '@angular/common/http';                      // Importar servicio http para hacer peticiones al servidor
 import { Router } from '@angular/router';                                           // Importar servicio router para redireccionar a otras páginas  
 
 
@@ -17,11 +16,7 @@ export class RegisterBusinessComponent implements OnInit {
   empresa = {                                                                       // Objeto para almacenar los datos del formulario
     email: '',
     password: '',
-    plan: 
-        {
-            name: ''
-        }
-    ,
+    plan:'',
     info: 
         {
             name: ''
@@ -38,7 +33,6 @@ export class RegisterBusinessComponent implements OnInit {
 
   constructor(
     private authService: AuthService,                                             // Se instancia el servicio authService
-    private http: HttpClient,                                                     // Se instancia el servicio http
     private router: Router,                                                       // Se instancia el servicio router
   ){}
 
@@ -51,7 +45,7 @@ export class RegisterBusinessComponent implements OnInit {
     this.empresa.info.name = this.formularioRegister.value.name;                  // Se almacena el nombre del formulario en el objeto empresa
 
     this.plan = selection;                                                        // Se almacena el plan seleccionado en la variable plan
-    this.empresa.plan.name = String(this.plan);                                   // Se almacena el plan seleccionado en el objeto empresa
+    this.empresa.plan = String(this.plan);                                        // Se almacena el plan seleccionado en el objeto empresa
   }
 
 

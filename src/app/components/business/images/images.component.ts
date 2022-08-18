@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ImgService } from 'src/app/services/img.service';
-                         
+import { AuthService } from '../../../services/auth.service'                         // Importar servicio auth para acceder a (login, registro, etc)
+
 
 
 @Component({
@@ -10,30 +12,42 @@ import { ImgService } from 'src/app/services/img.service';
   styleUrls: ['./images.component.css']
 })
 export class ImagesComponent implements OnInit {
+  @ViewChild('gallery') gal!: ElementRef;
 
   // Variables
   images:any=[];                        // guardar imagen almacenada en ImgService (base64)
   previsualizacionLogo!: string;        // guarda una previsualizacion del Logo
-  previsualizacionFavicon!: string;     // guarda una previsualizacion del favicon
-  empresa:any =[];
+
   png: any = [];                        // guarda la imagen png del logo
-  image: string;                        // guardar imagen almacenada en ImgService (base64)
+  image: string;                         // guardar imagen almacenada en ImgService (base64)
+  
+  id!:string;
+  img!:string;
+  gallery:any=[];
 
 
+
+  // formualrio para la imagen  
+  formularioImagen = new FormGroup({                                                                                                         
+    img:  new FormControl(''),
+  });
 
 
 
   constructor(
+    private authService: AuthService,                                         // Se instancia el servicio authService
     private sanitizer: DomSanitizer,
     private imgService: ImgService,
 
   ) {
-    this.images = JSON.parse(String(localStorage.getItem('user')));
+    this.id = (String(localStorage.getItem('_id')));
     this.image = imgService.img;
-
+    
+    // this.imprimirGallery();
   }
 
   ngOnInit(): void {
+    this.imprimirGallery();
   }
 
 
@@ -44,7 +58,8 @@ export class ImagesComponent implements OnInit {
     const logoCapturado = event.target.files[0]
     this.extraerBase64(logoCapturado).then((imagen: any) => {
       this.previsualizacionLogo = imagen.base;
-      this.empresa.logo = imagen.base;
+      this.formularioImagen.get('img')?.setValue(imagen.base);
+      console.log(this.formularioImagen.value);
     })
     this.png.push(logoCapturado);
   }
@@ -73,4 +88,41 @@ export class ImagesComponent implements OnInit {
     return null;
   })
 
+
+  // ========================================================================================
+  guardar (){
+    let ruta = `/empresas/${this.id}/gallery`;
+    console.log(ruta);
+
+    this.authService.update(ruta, this.formularioImagen.value)
+    .subscribe(res => {
+      console.log(res);
+    }), err => {
+      console.log(err);
+    }
+    this.previsualizacionLogo = this.image;
+    this.imprimirGallery();
+    window.location.reload()
+  }
+
+  imprimirGallery(){
+    let ruta = `/empresas/${this.id}/gallery`;
+    this.authService.getAll(ruta)
+    .subscribe(res => {
+      // console.log('res',res);
+      this.gallery.push(res['gallery']); 
+      // console.log(this.gallery,"gallery");
+    }), err => {
+      console.log(err);
+    }
+    console.log(this.gallery);
+  }
+
+
+
+
+
+
 }
+
+// Guardar imagen en el servidor ============================================================

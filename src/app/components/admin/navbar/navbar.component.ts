@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../services/auth.service'                         // Importar servicio auth para acceder a (login, registro, etc)
 
 
 @Component({
@@ -9,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   constructor(
+  private authService: AuthService,                                    
   ){}
 
   ngOnInit(): void {
   }
 
+  close(){
+    this.authService.cerrarSesion();
+  }
 
 }

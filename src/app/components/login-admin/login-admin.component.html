@@ -1,0 +1,20 @@
+<div [formGroup]="formularioLogin" class="conteiner">
+     <div class="form">
+          <div class="div-buttons">
+               <!-- <button class="btn-underline">Ingresar</button> -->
+               <img src="../../../assets/img/home/BW.png" alt="" style="width: 100%;">
+          </div>
+          <div class="div-information">
+               <p>Correo:</p>
+               <input formControlName="email" type="text" autocomplete=" ">
+               <p>Contraseña:</p>
+               <input formControlName="password" type="password" autocomplete=" ">
+          </div><br><br>
+          <div class="div-buttons-end">
+               <div>
+                    <button type="button" class="btn-comenzar" data-bs-dismiss="modal" (click)="login()">Comenzar!</button>
+                    <button type="button" class="btn-comenzar" data-bs-dismiss="modal" routerLink="/home">Atras</button>
+               </div>
+          </div><br>
+     </div>
+</div>

@@ -44,6 +44,7 @@ export class LoginBusinessComponent implements OnInit {
         this.empresa.push(res['user']);                                       // actualizar la lista de empresas   
         localStorage.setItem('token', res['token']);                          // Se guarda el token en el localStorage
         localStorage.setItem('user1', res['user']);
+        localStorage.setItem('_id', res['user']._id);
         localStorage.setItem('user', JSON.stringify(res['user']));
         this.loading();
       },                                                                      

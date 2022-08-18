@@ -1,18 +1,20 @@
-.grid{
+/* .grid{
      display: grid;
      grid-gap: 30px;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     grid-template-columns: repeat(5, 1fr);
+     grid-auto-rows: minmax(100px, auto);
+}
+
+.flex-botones{
+     display: flex;
+     align-items: center;
 }
 
 .hidden {
      color: transparent;
 }
 
-.card {
-     width: 40% !important;
-     padding: 10px !important;
-     box-shadow: 5px 5px 5px #79009539;
-}
+
 
 .card div button{
      margin: 10px 5px 5px 5px !important;
@@ -29,4 +31,112 @@
      color: transparent !important;
      background-color: transparent !important;
      opacity: 0 !important;
+} */
+
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     font-family: 'Raleway', sans-serif;
+}
+
+.grid{
+     display: grid;
+     grid-gap: 30px;
+     grid-template-columns: auto;
+}
+
+.html{
+     font-size: 62.5%;
+}
+
+.container {
+     padding: 3rem;
+}
+
+h1 {
+     font-size: 3rem;
+     padding: 2rem;
+     text-align: center;
+}
+
+.image {
+     display: block;
+     width: 100%;
+}
+
+.overlay{
+     position: relative;
+     top: 0;
+     bottom: 0;
+     left:0;
+     right: 0;
+     height: 100%;
+     width: 100%;
+     opacity: 0;
+     /* transition: .5s ease; */
+     background-color: rgba(0, 0, 0, 0.25)  !important;
+}
+
+.caption{
+     font-size: 2rem;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+}
+
+.thumbnail:hover {
+     transform: translateY(-4px) ;
+}
+
+.img-container:hover .overlay {
+     opacity: 1;
+}
+
+.flex-botones{
+     display: flex;
+     align-items: center;
+     padding-bottom: 30px;
+     /* background-color: rgba(0, 0, 0, 0.093); */
+}
+
+.card {
+     padding: 10px !important;
+     box-shadow: 5px 5px 5px #79009539;
+}
+
+.button{
+     width: 80px;
+     height: 30px;
+     font-size: 12px;
+     margin: 10px 5px 5px 5px !important;
+}
+
+.button i{
+     margin-right: 5px !important;
+}
+
+.input-file{
+     position: absolute;
+     width: 50px;
+     color: transparent !important;
+     background-color: transparent !important;
+     opacity: 0 !important;
+}
+
+.upload-imagen{
+     display: flex; 
+     flex-direction: column;
+     align-items: center;
+     width: 12rem; 
+}
+
+.card-img-top {
+     width: 190px !important;
 }
