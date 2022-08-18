@@ -10,7 +10,7 @@ import { Router } from '@angular/router';                                       
   styleUrls: ['./register-business.component.css']
 })
 export class RegisterBusinessComponent implements OnInit {
-
+  planes: any = [];
   plan!: String;                                                                    // almacena el tipo de plan seleccionado
   empresaR: any = [];                                                               // almacena los datos del formulario de registro de empresa
   empresa = {                                                                       // Objeto para almacenar los datos del formulario
@@ -37,6 +37,7 @@ export class RegisterBusinessComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
+    this.obtenerPlans();
   }
 
   plans(selection: String){                                                       // Función para seleccionar el plan
@@ -60,4 +61,14 @@ export class RegisterBusinessComponent implements OnInit {
     this.formularioRegister.reset();                                              // Se resetea el formulario                   
     }
 
+    obtenerPlans(){
+    let ruta = `/plan`;
+
+    this.authService.getAll(ruta)
+    .subscribe(res => {
+      this.planes = JSON.parse(JSON.stringify(res));
+    }), err => {
+      console.log(err);
+    }
+  }
 }
