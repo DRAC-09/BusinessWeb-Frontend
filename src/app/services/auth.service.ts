@@ -40,14 +40,8 @@ export class AuthService {
     }
 
 
-    obtenerUno (ruta:String){                           // Función para el registro         
-      return this.http.get(this.URL + ruta);             // Se retorna el resultado de la petición al servidor
-    }
 
-    update (ruta:String, user:any){                           // Actualiza Registros
-      return this.http.put(this.URL + ruta, user);                // retorna el resultado de la petición al servidor
-    }
-
+    
     
     getToken() {                                                    // Función para obtener el token
       return localStorage.getItem('token');                         // Se retorna el token del localStorage
@@ -57,15 +51,20 @@ export class AuthService {
       return this.http.post(this.URL + ruta, data);             // Se retorna el resultado de la petición al servidor
     }
     
+    
+    update (ruta:String, user:any){                                   // Actualiza Registros
+      return this.http.put(this.URL + ruta, user);                    // retorna el resultado de la petición al servidor
+    }
 
-
-
+    getOne (ruta:String){                                             // Función para obtener un registro por medio del id         
+      return this.http.get(this.URL + ruta);                          // retorna el resultado de la petición al servidor
+    }
 
     getAll (ruta:String){                                             // Obtener todos los registos.        
-      return this.http.get(this.URL + ruta);                          // Se retorna el resultado de la petición al servidor
+      return this.http.get(this.URL + ruta);                          // retorna el resultado de la petición al servidor
     }
 
     delete (ruta:String){                                             // Obtener todos los registos.
-      return this.http.delete(this.URL + ruta);                       // Se retorna el resultado de la petición al servidor
+      return this.http.delete(this.URL + ruta);                       // retorna el resultado de la petición al servidor
     }
 }

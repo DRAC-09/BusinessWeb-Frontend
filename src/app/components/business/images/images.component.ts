@@ -59,7 +59,7 @@ export class ImagesComponent implements OnInit {
     this.extraerBase64(logoCapturado).then((imagen: any) => {
       this.previsualizacionLogo = imagen.base;
       this.formularioImagen.get('img')?.setValue(imagen.base);
-      console.log(this.formularioImagen.value);
+      // console.log(this.formularioImagen.value);
     })
     this.png.push(logoCapturado);
   }
@@ -92,7 +92,7 @@ export class ImagesComponent implements OnInit {
   // ========================================================================================
   guardar (){
     let ruta = `/empresas/${this.id}/gallery`;
-    console.log(ruta);
+    // console.log(ruta);
 
     this.authService.update(ruta, this.formularioImagen.value)
     .subscribe(res => {
@@ -103,6 +103,8 @@ export class ImagesComponent implements OnInit {
     this.previsualizacionLogo = this.image;
     this.imprimirGallery();
     window.location.reload()
+    // console.log('formulario', this.formularioImagen.value);
+    // console.log('galerya variable', this.gallery);
   }
 
   imprimirGallery(){
@@ -111,16 +113,26 @@ export class ImagesComponent implements OnInit {
     .subscribe(res => {
       // console.log('res',res);
       this.gallery.push(res['gallery']); 
-      // console.log(this.gallery,"gallery");
+      // console.log("gallery",this.gallery);
+
+      // let gf = {};
+      // console.log("gf",gf);
     }), err => {
       console.log(err);
     }
-    console.log(this.gallery);
+
+    
   }
 
 
+  obtenerGalerya(){
 
+  }
 
+  // eliminar imagen del arreglo de imagenes
+  eliminarImagen(img:string){
+
+  }
 
 
 }

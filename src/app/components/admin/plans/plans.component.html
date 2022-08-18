@@ -1,1 +1,87 @@
-<p>plans works!</p>
+<div class="container">
+     <!-- <h3 *ngIf="admins.length==0"></h3> -->
+     <div style="display: flex; align-items: center">
+          <h1 style="margin-right: 15px;">Administradores</h1><br>
+          <button class="btn" (click)="obtenerPlans()">
+               <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+     </div><br>
+     <table class="table" *ngIf="plans.length!=0">
+          <thead>
+               <tr>
+                    <th scope="col">Tipo</th>
+                    <th class="center" scope="col">Paginas</th>
+                    <th class="center" scope="col">Categorias</th>
+                    <th class="center" scope="col">Bloques</th>
+                    <th class="center" scope="col">Productos</th>
+               </tr>
+          </thead>
+          
+          <tbody class="table-group-divider">
+               <tr *ngFor="let plan of plans; ">
+                    <td>{{plan.name}}</td>
+                    <td class="center" >{{plan.pages}}</td>
+                    <td class="center" >{{plan.categories}}</td>
+                    <td class="center" >{{plan.blocks}}</td>
+                    <td class="center" >{{plan.products}}</td>
+                    
+                    <td class="alinear">
+                         <button class="boton-imagen" type="button" (click)="edit(plan._id)" data-bs-toggle="modal" data-bs-target="#formPlan">
+                              <i class="fa-solid fa-pen-to-square"></i>
+                         </button>
+                    </td>
+               </tr>
+          </tbody>
+          
+     </table>
+</div>
+
+
+
+
+
+
+<div class="modal fade centrar-modal" id="formPlan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog">
+          <div class="modal-content">
+               <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Actualiza Plan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+
+                    <form [formGroup]="formularioPlan">
+                         <div class="formulario-modal">
+                              <table>
+                                   <tbody>
+                                        <tr class="espacio">
+                                             <td><div class="espacio">Tipo:  </div></td>
+                                             <td><input formControlName="tipo" class="campo" type="text" readonly="readonly"></td>
+                                        </tr>
+                                        <tr>
+                                             <td><div class="espacio">Paginas:  </div></td>
+                                             <td><input formControlName="pages" class="campo" type="number" ></td>
+                                        </tr>
+                                        <tr>
+                                             <td><div class="espacio" >Categorias:  </div></td>
+                                             <td><input formControlName="categories" class="campo" type="number" ></td>
+                                        </tr>
+                                        <tr>
+                                             <td><div class="espacio" >Bloques:  </div></td>
+                                             <td><input formControlName="blocks" class="campo" type="number"></td>
+                                        </tr>
+                                        <tr>
+                                             <td><div class="espacio" >Productos:  </div></td>
+                                             <td><input formControlName="products" class="campo" type="number"></td>
+                                        </tr>
+                                   </tbody>
+                              </table>
+                         </div>
+                    </form>
+
+               <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-success btn-sm" data-bs-dismiss="modal" (click)="updatePlan()">Actualizar</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+               </div>
+          </div>
+     </div>
+</div>
