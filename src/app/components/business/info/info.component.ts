@@ -27,15 +27,12 @@ export class InfoComponent implements OnInit {
     empresa:any =[];
 
 
-    prueba="prueba";
     // formualrio para empresa  
     formularioEmpresa = new FormGroup({                                                                                                         
       email:  new FormControl(''),
-          plan : new FormGroup ({
-            name:         new FormControl('',),                      
-          }), 
+      plan : new FormControl(''), 
           info : new FormGroup ({
-              name:         new FormControl('',),                      
+              name:         new FormControl(''),                      
               tittle:       new FormControl(''),                      
               description:  new FormControl(''),                      
               logo:         new FormControl(''),                      
@@ -59,13 +56,11 @@ export class InfoComponent implements OnInit {
     this.formularioEmpresa.get('info')?.get('description')?.setValue(this.empresa.info[0].description);
     this.formularioEmpresa.get('info')?.get('logo')?.setValue(this.empresa.info[0].logo);
     this.formularioEmpresa.get('info')?.get('favicon')?.setValue(this.empresa.info[0].favicon);
-    this.plan = this.empresa.plan[0].name;
+    this.plan = this.empresa.plan;
     this.previsualizacionFavicon = this.empresa.info[0].favicon;
     this.previsualizacionLogo = this.empresa.info[0].logo;
     this.image = imgService.img;
     this.formularioEmpresa.disable();
-
-
     // console.log(this.empresa);
 
   }
@@ -125,13 +120,14 @@ export class InfoComponent implements OnInit {
 
 
 
-
+  // ========================================================================================
   
 
   actualizar(){
     this.editando = true;                                                                 
     this.guardando = false;
     
+    this.formularioEmpresa.get('plan')?.setValue(this.plan);
     let ruta = `/empresas/${this.empresa._id}`;
     console.log(ruta);
     
@@ -139,7 +135,7 @@ export class InfoComponent implements OnInit {
     localStorage.setItem('empresa2', JSON.stringify(this.formularioEmpresa.value));
     console.log(this.formularioEmpresa.value);
     
-    this.authService.actualizar(ruta, this.formularioEmpresa.value)
+    this.authService.update(ruta, this.formularioEmpresa.value)
     .subscribe(res => {
       console.log(res);
     }), err => {

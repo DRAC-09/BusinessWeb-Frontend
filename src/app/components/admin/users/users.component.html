@@ -1,1 +1,66 @@
-<p>users works!</p>
+<div class="container">
+     <!-- <h3 *ngIf="empresas.length==0"></h3> -->
+     <div style="display: flex; align-items: center">
+          <h1 style="margin-right: 15px;">Empresas</h1><br>
+          <button class="btn" (click)="obtenerEmpresas()">
+               <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+     </div><br>
+     <table class="table" *ngIf="empresas.length!=0">
+          <thead>
+               <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Usuario</th>
+               </tr>
+          </thead>
+          
+          <tbody class="table-group-divider">
+               <tr *ngFor="let empresa of empresas; ">
+                    <td>{{empresa.email}}</td>
+                    <td *ngFor="let info of empresa.info;">{{info.name}}</td>
+                    <td>Empresa</td>
+                    
+                    <td class="alinear">
+                         <button class="boton-imagen" type="button" (click)="deleteEmpresa(empresa._id)" >
+                              <i class="fa-solid fa-trash-can"></i>
+                         </button>
+                    </td>
+               </tr>
+          </tbody>
+          
+     </table>
+</div><br><br>
+
+
+<div class="container">
+     <!-- <h3 *ngIf="admins.length==0"></h3> -->
+     <div style="display: flex; align-items: center">
+          <h1 style="margin-right: 15px;">Administradores</h1><br>
+          <button class="btn" (click)="obtenerAdmins()">
+               <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+     </div><br>
+     <table class="table" *ngIf="admins.length!=0">
+          <thead>
+               <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Usuario</th>
+               </tr>
+          </thead>
+          
+          <tbody class="table-group-divider">
+               <tr *ngFor="let admin of admins; ">
+                    <td>{{admin.email}}</td>
+                    <td>Administrador</td>
+                    
+                    <td class="alinear">
+                         <button class="boton-imagen" type="button" (click)="deleteAdmin(admin._id)" >
+                              <i class="fa-solid fa-trash-can"></i>
+                         </button>
+                    </td>
+               </tr>
+          </tbody>
+          
+     </table>
+</div>

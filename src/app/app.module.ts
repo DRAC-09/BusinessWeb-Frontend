@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginBusinessComponent } from './components/login-business/login-business.component';
 import { RegisterBusinessComponent } from './components/register-business/register-business.component';
+import { LoginAdminComponent } from './components/login-admin/login-admin.component';
 
 
 
@@ -23,6 +24,7 @@ import { RegisterBusinessComponent } from './components/register-business/regist
     HomeComponent,
     LoginBusinessComponent,
     RegisterBusinessComponent,
+    LoginAdminComponent,
   ],
 
   imports: [
